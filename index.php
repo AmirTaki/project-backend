@@ -4,6 +4,7 @@ require_once "./functions/pdo_connection.php";
 $menus = readTable ("asus", "SELECT * FROM asus.menu  Where status = 10", $single = false, $execute = null);
 $megaMenu = readTable ("asus", "SELECT * FROM asus.megamenu  Where status = 10", $single = false, $execute = null);
 $categoryTable = readTable ("asus", "SELECT * FROM asus.category  Where status = 10", $single = false, $execute = null);
+$seriesTable = readTable ("asus", "SELECT * FROM asus.series  Where status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +64,7 @@ $categoryTable = readTable ("asus", "SELECT * FROM asus.category  Where status =
                                 <?php foreach($categoryTable as $category) {
                                     if($category->list == $column->list && $category->title == $menu->title){ ?>
                                 <div class = "listCategory">
-                                    <i class="bi bi-blockquote-left"></i>
+                                    <i class=<?= $category->sign ?>></i>
                                     <div><?= $category->category ?></div>
                                 </div>
                                 <?php }} ?>
@@ -72,19 +73,12 @@ $categoryTable = readTable ("asus", "SELECT * FROM asus.category  Where status =
                                 <div class ='titleProduct'>
                                     Product
                                 </div>
+                                <?php foreach($seriesTable as $series) {
+                                    if($series->list == $column->list && $series->title == $menu->title){ ?>
                                 <div class = "listProduct">
-                                    <div>itemSidetoisde</div>
+                                    <div><?= $series->series ?></div>
                                 </div>
-                                <div class = "listProduct">
-                                    <div>itemSidetoisde</div>
-                                </div>
-                                <div class = "listProduct">
-                                    <div>itemSidetoisde</div>
-                                </div>
-                                <div class = "listProduct">
-                                    <div>itemSidetoisde</div>
-                                </div>
-                             
+                                <?php }} ?>
                             </div>
                             <div class = "itemImage">
                                 <div class ="containerImgae">
