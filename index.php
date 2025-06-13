@@ -5,6 +5,7 @@ $menus = readTable ("asus", "SELECT * FROM asus.menu  Where status = 10", $singl
 $megaMenu = readTable ("asus", "SELECT * FROM asus.megamenu  Where status = 10", $single = false, $execute = null);
 $categoryTable = readTable ("asus", "SELECT * FROM asus.category  Where status = 10", $single = false, $execute = null);
 $seriesTable = readTable ("asus", "SELECT * FROM asus.series  Where status = 10", $single = false, $execute = null);
+$imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,14 +82,14 @@ $seriesTable = readTable ("asus", "SELECT * FROM asus.series  Where status = 10"
                                 <?php }} ?>
                             </div>
                             <div class = "itemImage">
+                                <?php foreach($imageTable as $img) {
+                                    if($img->list == $column->list &&  $img->title == $menu->title){  ?>
                                 <div class ="containerImgae">
-                                    <img src="https://picsum.photos/200" alt="">
-                                    <div class = "captionImage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptatum.</div>
+                                    <img src=<?= $img->image ?> alt="">
+                                    <div class = "captionImage"><?= $img->body ?></div>
                                 </div>
-                                <div class ="containerImgae">
-                                    <img src="https://picsum.photos/200" alt="">
-                                    <div class = "captionImage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptatum.</div>
-                                </div>
+                                <?php }} ?>
+                              
                             </div>  
                         </div>
 
