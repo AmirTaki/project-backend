@@ -147,7 +147,7 @@
     height: 100%;
     top: 50px;
     left:30%;
-    /* display: none; */
+    display: none;
 }
 .backSideToSide, .exitSidebbar{
     display: none;

@@ -7,6 +7,7 @@ const itemSidertoSider = document.querySelectorAll('.itemSidertoSider')
 const SideToinSide = document.querySelectorAll(".SideToinSide")
 const backSideToSide = document.querySelectorAll(".backSideToSide")
 const exitSidebbar = document.querySelectorAll('.exitSidebbar');
+const containerSideToinSide = document.querySelectorAll(".containerSideToinSide")
 
 searchIconInput.addEventListener("focus", (e)=> {
     iconSearch.style.opacity = 0
@@ -47,14 +48,41 @@ deleteContainer.addEventListener('click', (e)=>{
 })
 
 
-
+const closeSideToInSide = () => {
+    for (let i = 0; i < SideToinSide.length ; i++){
+        SideToinSide[i].style.display = "none"
+        itemSidertoSider[i].style.backgroundColor = "rgb(249, 249, 249)"
+    }
+}
 
 for(let i = 0; i < itemSidertoSider.length; i++){
-    itemSidertoSider[i].addEventListener("click", (e)=>{
-        SideToinSide[i].style.animation = "moveSideToSide .3s linear forwards"  
-        SideToinSide[i].style.display = "block"
+    itemSidertoSider[i].addEventListener("mousemove", (e)=>{
+        if(window.innerWidth > 750){
+            closeSideToInSide()
+            SideToinSide[i].style.display = "block"
+            itemSidertoSider[i].style.backgroundColor = "rgb(237, 237, 237)"
+        }
     })
 }
+// for(let i = 0; i < containerSideToinSide.length; i++){
+//     containerSideToinSide[i].addEventListener("mouseleave", (e)=>{
+//         if(window.innerWidth > 750){
+//             SideToinSide[i].style.display = "none"
+//         }
+//     })
+// }
+
+
+for(let i = 0; i < itemSidertoSider.length; i++){        
+    itemSidertoSider[i].addEventListener("click", (e)=>{
+        if(window.innerWidth <= 750){
+            SideToinSide[i].style.animation = "moveSideToSide .3s linear forwards"  
+            SideToinSide[i].style.display = "block"
+        }
+    })  
+}
+
+
 for(let i = 0; i < backSideToSide.length ; i++){
     backSideToSide[i].addEventListener("click", (e)=>{
     SideToinSide[i].style.animation = "moveSideToSideReverse .3s linear forwards"
