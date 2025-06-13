@@ -50,7 +50,13 @@ deleteContainer.addEventListener('click', (e)=>{
 
 const closeSideToSide = () => {
     for(let i = 0; i < SideToinSide.length; i++){
-        SideToinSide[i].style.display = "none"  
+        SideToinSide[i].style.display = "none"      
+        closeChangeBackgroundImSidertoSider()
+    }
+}
+
+const closeChangeBackgroundImSidertoSider = () => {
+    for(let i = 0; i < SideToinSide.length; i++){
         itemSidertoSider[i].style.backgroundColor = "transparent"
     }
 }
@@ -120,5 +126,6 @@ window.addEventListener("resize", (e)=>{
     HideFlexInputSearchHeader()
     resizeItem()
     closeSideToinSide()
+    closeChangeBackgroundImSidertoSider()
 })
 
