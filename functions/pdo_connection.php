@@ -1,6 +1,6 @@
 <?php 
 // address localhost
-$address = "http://localhost/adidas/";
+$address = "http://localhost/project/";
 define("BASE_URL", $address);
 
 // redirect

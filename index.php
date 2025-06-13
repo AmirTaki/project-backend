@@ -1,3 +1,9 @@
+<?php
+require_once "./functions/check_section.php";
+require_once "./functions/pdo_connection.php";
+$menus = readTable ("asus", "SELECT * FROM asus.menu  Where status = 10", $single = false, $execute = null);
+$megaMenu = readTable ("asus", "SELECT * FROM asus.megamenu  Where status = 10", $single = false, $execute = null);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,19 +21,24 @@
         <div class = "logo">
             <img src="https://cdn.pixabay.com/photo/2016/12/17/18/12/logo-1914020_1280.png" alt="">
         </div>
+      
         <div class = "containterHeader" style="background-color: white;">
             <div class = "deleteContainer">
                 <i class="bi bi-x-lg"></i>
             </div>
+            <?php foreach($menus as $menu) {?>
             <div class = "itemHeaderDiv">
                 <div class = "itemHeader">
-                    <div>item</div>
+                    <div><?= $menu->title ?></div>
                     <div class = "arrowdownHeader"><i class="bi bi-chevron-down"></i></div>
                 </div>
+    
                 <div class = "containerSidertoSider">
+                    <?php foreach($megaMenu as $column ) {
+                        if($column->title === $menu->title){?>
                     <div class = "itemSiderDiv">
                         <div class = "itemSidertoSider">
-                            <div>column</div>
+                            <div><?= $column->list ?></div>
                             <i><i class="bi bi-chevron-right"></i></i>
                         </div>
                     </div>
@@ -96,50 +107,13 @@
                         </div>
 
                     </div>
-                </div>  
+                    <?php }} ?>
+                </div> 
+               
             </div>
-            <!--  -->
-            <div class = "itemHeaderDiv">
-                <div class = "itemHeader">
-                    <div>item</div>
-                    <div class = "arrowdownHeader"><i class="bi bi-chevron-down"></i></div>
-                </div>
-                <div class = "containerSidertoSider">
-                    <div class = "itemSidertoSider">
-                        <div>column</div>
-                        <i><i class="bi bi-chevron-right"></i></i>
-                    </div>
-                    <div class = "itemSidertoSider">
-                        <div>column</div>
-                        <i><i class="bi bi-chevron-right"></i></i>
-                    </div>
-                    <div class = "itemSidertoSider">
-                        <div>column</div>
-                        <i><i class="bi bi-chevron-right"></i></i>
-                    </div>
-                </div>  
-            </div>
-            <div class = "itemHeaderDiv">
-                <div class = "itemHeader">
-                    <div>item</div>
-                    <div class = "arrowdownHeader"><i class="bi bi-chevron-down"></i></div>
-                </div>
-                <div class = "containerSidertoSider">
-                    <div class = "itemSidertoSider">
-                        <div>column</div>
-                        <i><i class="bi bi-chevron-right"></i></i>
-                    </div>
-                    <div class = "itemSidertoSider">
-                        <div>column</div>
-                        <i><i class="bi bi-chevron-right"></i></i>
-                    </div>
-                    <div class = "itemSidertoSider">
-                        <div>column</div>
-                        <i><i class="bi bi-chevron-right"></i></i>
-                    </div>
-                </div>  
-            </div>
+            <?php } ?>
         </div>
+
 
 
         <div class = "searchIcon">
