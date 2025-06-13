@@ -48,19 +48,16 @@ deleteContainer.addEventListener('click', (e)=>{
 })
 
 
-const closeSideToInSide = () => {
-    for (let i = 0; i < SideToinSide.length ; i++){
+const closeSideToSide = () => {
+    for(let i = 0; i < SideToinSide.length; i++){
         SideToinSide[i].style.display = "none"
-        itemSidertoSider[i].style.backgroundColor = "rgb(249, 249, 249)"
-       
     }
 }
 
 for(let i = 0; i < itemSidertoSider.length; i++){
     itemSidertoSider[i].addEventListener("mousemove", (e)=>{
-      
         if(window.innerWidth > 750){
-            closeSideToInSide()
+            closeSideToSide()
             SideToinSide[i].style.display = "block"
             itemSidertoSider[i].style.backgroundColor = "rgb(237, 237, 237)"
         }
