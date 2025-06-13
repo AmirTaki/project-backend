@@ -325,7 +325,7 @@
     }
     .itemSidertoSider:hover {
         cursor: pointer;
-        background-color: aliceblue;
+        background-color: aliceblue !important;
     }
     .itemSidertoSider .bi-chevron-right{
         display: inline;
