@@ -8,6 +8,7 @@ const SideToinSide = document.querySelectorAll(".SideToinSide")
 const backSideToSide = document.querySelectorAll(".backSideToSide")
 const exitSidebbar = document.querySelectorAll('.exitSidebbar');
 const containerSideToinSide = document.querySelectorAll(".containerSideToinSide")
+const itemHeader = document.querySelectorAll('.itemHeader')
 
 searchIconInput.addEventListener("focus", (e)=> {
     iconSearch.style.opacity = 0
@@ -48,6 +49,14 @@ deleteContainer.addEventListener('click', (e)=>{
 })
 
 
+
+for (let i = 0; i < itemHeader.length ; i++){
+    if(window.innerWidth > 750){
+        itemHeader[i].addEventListener("mousemove",(e)=>{
+        
+        })
+    }
+}
 const closeSideToSide = () => {
     for(let i = 0; i < SideToinSide.length; i++){
         SideToinSide[i].style.display = "none"      
@@ -121,6 +130,8 @@ for(let i = 0; i < exitSidebbar.length; i++){
 const displaySideToinSide = () => {
     window.innerWidth > 750 ? "flex" : "none"
 }
+
+
 
 window.addEventListener("resize", (e)=>{
     HideFlexInputSearchHeader()
