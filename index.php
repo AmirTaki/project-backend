@@ -24,27 +24,31 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
         <div class = "logo">
             <img src="https://cdn.pixabay.com/photo/2016/12/17/18/12/logo-1914020_1280.png" alt="">
         </div>
-      
         <div class = "containterHeader" style="background-color: white;">
             <div class = "deleteContainer">
                 <i class="bi bi-x-lg"></i>
             </div>
-            <?php foreach($menus as $menu) {?>
+            <?php foreach($menus as $menu) { ?>
             <div class = "itemHeaderDiv">
                 <div class = "itemHeader">
                     <div><?= $menu->title ?></div>
                     <div class = "arrowdownHeader"><i class="bi bi-chevron-down"></i></div>
                 </div>
-    
-                <div class = "containerSidertoSider">
-                    <?php foreach($megaMenu as $column ) {
-                        if($column->title === $menu->title){?>
-                    <div class = "itemSiderDiv">
-                        <div class = "itemSidertoSider">
-                            <div><?= $column->list ?></div>
-                            <i><i class="bi bi-chevron-right"></i></i>
+        
+                <div class = "containerSidertoSider" style = "background-color: pink;" >
+                    <div class = "containerSidertoSiderDiv" >
+                        <div class = "itemSiderDiv" style = "width : 100%">
+                            <?php foreach($megaMenu as $column){
+                                if ($column->title === $menu->title){
+                            ?>
+                            <div class = "itemSidertoSider">
+                                <div><?= $column->list ?></div>
+                                <i><i class="bi bi-chevron-right"></i></i>
+                            </div>
+                            <?php }} ?>
                         </div>
                     </div>
+                  
                  
                     <div class = "SideToinSide">
                         <div class = "backSideToSide">
@@ -56,51 +60,67 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                                 <i class="bi bi-x-lg"></i>
                             </div>
                         </div>
-                        
                         <div class = "containerSideToinSide"> 
                             <div class = "itemCategory">
                                 <div class ='titleCategory'>
                                     Category
                                 </div>
-                                <?php foreach($categoryTable as $category) {
-                                    if($category->list == $column->list && $category->title == $menu->title){ ?>
                                 <div class = "listCategory">
-                                    <i class=<?= $category->sign ?>></i>
-                                    <div><?= $category->category ?></div>
+                                    <i class="bi bi-blockquote-left"></i>
+                                    <div>itemSidetoisde</div>
                                 </div>
-                                <?php }} ?>
+                                <div class = "listCategory">
+                                    <i class="bi bi-blockquote-left"></i>
+                                    <div>itemSidetoisde</div>
+                                </div>
+                                <div class = "listCategory">
+                                    <i class="bi bi-blockquote-left"></i>
+                                    <div>itemSidetoisde</div>
+                                </div>
+                                <div class = "listCategory">
+                                    <i class="bi bi-blockquote-left"></i>
+                                    <div>itemSidetoisde</div>
+                                </div>
+                               
                             </div>
                             <div class = "itemProduct">
                                 <div class ='titleProduct'>
                                     Product
                                 </div>
-                                <?php foreach($seriesTable as $series) {
-                                    if($series->list == $column->list && $series->title == $menu->title){ ?>
                                 <div class = "listProduct">
-                                    <div><?= $series->series ?></div>
+                                    <div>itemSidetoisde</div>
                                 </div>
-                                <?php }} ?>
+                                <div class = "listProduct">
+                                    <div>itemSidetoisde</div>
+                                </div>
+                                <div class = "listProduct">
+                                    <div>itemSidetoisde</div>
+                                </div>
+                                <div class = "listProduct">
+                                    <div>itemSidetoisde</div>
+                                </div>
+                             
                             </div>
                             <div class = "itemImage">
-                                <?php foreach($imageTable as $img) {
-                                    if($img->list == $column->list &&  $img->title == $menu->title){  ?>
                                 <div class ="containerImgae">
-                                    <img src=<?= $img->image ?> alt="">
-                                    <div class = "captionImage"><?= $img->body ?></div>
+                                    <img src="https://picsum.photos/200" alt="">
+                                    <div class = "captionImage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptatum.</div>
                                 </div>
-                                <?php }} ?>
-                              
+                                <div class ="containerImgae">
+                                    <img src="https://picsum.photos/200" alt="">
+                                    <div class = "captionImage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, voluptatum.</div>
+                                </div>
                             </div>  
                         </div>
 
                     </div>
-                    <?php }} ?>
-                </div> 
-               
+                </div>  
             </div>
             <?php } ?>
+            <!--  -->
+           
+        
         </div>
-
 
 
         <div class = "searchIcon">
