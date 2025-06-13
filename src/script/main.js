@@ -52,11 +52,13 @@ const closeSideToInSide = () => {
     for (let i = 0; i < SideToinSide.length ; i++){
         SideToinSide[i].style.display = "none"
         itemSidertoSider[i].style.backgroundColor = "rgb(249, 249, 249)"
+       
     }
 }
 
 for(let i = 0; i < itemSidertoSider.length; i++){
     itemSidertoSider[i].addEventListener("mousemove", (e)=>{
+      
         if(window.innerWidth > 750){
             closeSideToInSide()
             SideToinSide[i].style.display = "block"
@@ -64,13 +66,6 @@ for(let i = 0; i < itemSidertoSider.length; i++){
         }
     })
 }
-// for(let i = 0; i < containerSideToinSide.length; i++){
-//     containerSideToinSide[i].addEventListener("mouseleave", (e)=>{
-//         if(window.innerWidth > 750){
-//             SideToinSide[i].style.display = "none"
-//         }
-//     })
-// }
 
 
 for(let i = 0; i < itemSidertoSider.length; i++){        
