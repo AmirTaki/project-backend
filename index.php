@@ -3,6 +3,7 @@ require_once "./functions/check_section.php";
 require_once "./functions/pdo_connection.php";
 $menus = readTable ("asus", "SELECT * FROM asus.menu  Where status = 10", $single = false, $execute = null);
 $megaMenu = readTable ("asus", "SELECT * FROM asus.megamenu  Where status = 10", $single = false, $execute = null);
+$categoryTable = readTable ("asus", "SELECT * FROM asus.category  Where status = 10", $single = false, $execute = null);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,28 +54,19 @@ $megaMenu = readTable ("asus", "SELECT * FROM asus.megamenu  Where status = 10",
                                 <i class="bi bi-x-lg"></i>
                             </div>
                         </div>
+                        
                         <div class = "containerSideToinSide"> 
                             <div class = "itemCategory">
                                 <div class ='titleCategory'>
                                     Category
                                 </div>
+                                <?php foreach($categoryTable as $category) {
+                                    if($category->list == $column->list && $category->title == $menu->title){ ?>
                                 <div class = "listCategory">
                                     <i class="bi bi-blockquote-left"></i>
-                                    <div>itemSidetoisde</div>
+                                    <div><?= $category->category ?></div>
                                 </div>
-                                <div class = "listCategory">
-                                    <i class="bi bi-blockquote-left"></i>
-                                    <div>itemSidetoisde</div>
-                                </div>
-                                <div class = "listCategory">
-                                    <i class="bi bi-blockquote-left"></i>
-                                    <div>itemSidetoisde</div>
-                                </div>
-                                <div class = "listCategory">
-                                    <i class="bi bi-blockquote-left"></i>
-                                    <div>itemSidetoisde</div>
-                                </div>
-                               
+                                <?php }} ?>
                             </div>
                             <div class = "itemProduct">
                                 <div class ='titleProduct'>
