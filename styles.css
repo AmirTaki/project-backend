@@ -82,63 +82,40 @@
 }
 /* MENU */
 .menu{
-    margin-right: 20px;
-}
-/*  menu container  */
-.containerMenu i{
-    display: none;
-}
-/* MENU-TITLE */
-.menu-title{
-    padding: 10px 0;
-    font-size: 15px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid white;
-    transform:  border-bottom .5s;
-}
-.menu-title:hover {
-    cursor: pointer;
-    border-bottom: 2px solid black;
-}
-/* TABLE MEGAMENU */
-/* megaMenuContainer  */
-.megaMenuContainer{
-    width: 100%;
     background-color: red;
-    height: 500px;
-    position: fixed;
-    top: 50px;
-    left : 0;
-    display: none;
-}
-
-.menu:hover .megaMenuContainer {
-    display: flex;
-}
-/* list */
-.list{
-    background-color: blue;
-    display: flex;
-    flex-flow: column nowrap;
     width: 100%;
+    display: flex;
 }
-.container-list{
-    background-color: yellow;
+.item{
+    background-color: blue;
+    position: fixed;
+    top: 32px;
     width: 25%;
 }
-.column-list{}
-/* chevonIcon */
-.chevron_icon{
-    display: none;
+.list {
+    background-color: yellow;
+    position: fixed;
+    top:32px;
+    left:25%;
+    width:25% ;
 }
 
-.category, .product, .image {
-    display: none;
+.product{
+    background-color: green;
+    position: fixed;
+    top:32px;
+    left:50%;
+    width:25% ;
 }
+.img {
+    background-color: blue;
+    position: fixed;
+    top:32px;
+    left:75%;
+    width:25% ;
 
+}
+        
 
 /* MEDIDA QUERY SCREEN MOBILE SIZE */
 @media screen and (max-width : 750px) {
@@ -236,82 +213,47 @@
     }
     /* MENU */
     .menu{
+        background-color: red;
         width: 100%;
-    }
-    /*  menu container  */
-    .containerMenu{
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0px 14px;
-        margin: 0;
-        color : gray;
-        transition: color .5s 
-    }
-    .containerMenu:hover, menu:hover .containerMenu {
-        cursor: pointer;
-        color : rgb(57, 57, 57)
-    }
-    .rotateIcon {
-        transition: transform .5s;
-    }
-    .menu:hover  .rotateIcon  {
-        transform: rotate(180deg);
-    }
-    .containerMenu i{
         display: block;
     }
-    /* MENU-TITLE */
-    .menu-title{
-        display: flex;
-        border: none;
+    .item{
+        background-color: blue;
+        position: static;
+        width: 100%;
     }
-    .menu-title:hover {
-       border: none; 
+    
+    .container{
+        background-color: green;
+        position: fixed;
+        height: 20px;
+        z-index: 2;
+        top:60px;
+        left: 0;
+        width:100% ;
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .list {
+        background-color: yellow;
+        position: static;
+        top:32px;
+        height: 50%;
+        width:50% ;
+    }
+    .product{
+        position: static;  
+        background-color: pink;
+        width: 50%;
+        height: 50%;  
+    }
+      
+    .img {
+        background-color: blue;
+        position: static;
+        width: 50%;
+        height: inherit;
     }  
-    /* TABLE MEGAMENU */
-    .megaMenuContainer{
-        position: static;
-        height: auto;
-        display: block;
-    }
-    .menu:hover .megaMenuContainer {
-        display: block;
 }
-    /* list */
-    .list{
-        width: 100%;
-        position: static;
-        display: flex;
-        flex-flow: column nowrap;
-        height: auto;
-        overflow: hidden;
-    }
-    /* container list */
-    .container-list{
-        background-color: rgb(246, 246, 246);
-        display: flex;
-        flex-flow: row nowrap;
-        position: static;
-        width: 100%;
-        height: 0;
-        justify-content: space-between;
-        padding: 0 30px;
-        align-items: center;
-        color : gray;
-        transition: color .5S,  background-color .5s, height .3s ;
-    }
-    .menu:hover .container-list {
-        height: 40px;
-    }
-    .container-list:hover {
-        cursor: pointer;
-        background-color: aliceblue;
-        color:rgb(62, 62, 62)
-    }
-    /* chevron icon */
-    .chevron_icon{
-        display: block;  
-    }
-} 
+

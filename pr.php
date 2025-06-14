@@ -28,64 +28,19 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
         <div class = "logo">
             <img src="https://cdn.pixabay.com/photo/2016/12/17/18/12/logo-1914020_1280.png" alt="">
         </div>
-        <!-- MEGAMENU & SIDEBAR -->
-        <div class = "megaMenu">
-            <!--  CONTANIER CROSS -->
-            <div class = "containerCross">
-                <i class="bi bi-x-lg"></i>
-            </div>
-            <!-- TABLE MENU -->
-            <?php  foreach($menus as $menu){ ?>
-            <div class = "menu" >
-                <div class = "containerMenu">
-                    <div  class = "menu-title">  <?= $menu->title ?> </div>
-                    <div class = "rotateIcon"> <i class="bi bi-chevron-down"></i></div>         
-                </div>
-                <!-- TABLE MEGAMENU -->
-                <div class = "megaMenuContainer"> 
-                    <div class = "list">
-                        <?php foreach($megaMenu as $column) {
-                            if($column->title === $menu->title){
-                        ?>
-                        <div class = "container-list" >
-                            <div class = "column-list"><?= $column->list ?></div>
-                            <div class = "chevron_icon"> <i class="bi bi-chevron-right"></i></div>         
-                        </div>
-                        <?php foreach($categoryTable as $category) { 
-                            if($category->title === $menu->title && $category->list === $column->list){
-                        ?>
-                        <!-- TABLE CATEGORY -->
-                        <div class = "category">
-                            <div style = "display: flex; background-color: greenyellow ;">
-                                <div><?= $category->category ?></div>
-                                <i class="<?= $category->sign ?>"></i>
-                            </div>
-                        </div>
-                        <?php }} ?>
-                        <!-- TABLE SERIES -->
-                        <?php foreach($seriesTable as $series) {
-                            if($series->list === $column->list && $series->title === $menu->title){
-                        ?>
-                        <div class = "product">
-                            <div style = " background-color: pink "><?= $series->series ?></div>
-                        </div>
-                        <?php }} ?>
-                        <!-- TABLE IMAGE -->
-                        <?php foreach($imageTable as $img){
-                            if ($img->list === $column->list && $img->title === $menu->title){
-                        ?>
-                        <div class = "image" >
-                            <div style = "background-color :aquamarine">
-                                <img src="<?= $img->image ?>" alt="">
-                                <div><?= $img->body ?></div>
-                            </div>
-                        </div>
-                        <?php }} ?>
-                        <?php }} ?>   
+        <!-- MENU -->
+        <div class = "menu">
+            <div>menu</div>
+            <div class = 'item' style = "display :none">
+                <div>item</div>
+                    <div class = "container">
+                        <div class = "list">list</div>
+                        <div class ="product">product</div>
+                        <div class = "img">img</div>
                     </div>
                 </div>
             </div>
-            <?php } ?>
+        </div>    
         </div>
 
         <!-- SEARCH ICON HEADER -->
