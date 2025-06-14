@@ -84,6 +84,10 @@
 .menu{
     margin-right: 20px;
 }
+/*  menu container  */
+.containerMenu i{
+    display: none;
+}
 /* MENU-TITLE */
 .menu-title{
     padding: 10px 0;
@@ -193,13 +197,27 @@
     }
     /* MENU */
     .menu{
+        width: 100%;
+    }
+    /*  menu container  */
+    .containerMenu{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        background-color: blue;
+        padding: 3px 14px;
+    }
+    .containerMenu i{
+        display: block;
     }
     /* MENU-TITLE */
     .menu-title{
-        
+        display: inline;
+        border: none;
     }
     .menu-title:hover {
-        
-    }
+       border: none; 
+    }  
     
 }

@@ -37,7 +37,10 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
             <!-- TABLE MENU -->
             <?php  foreach($menus as $menu){ ?>
             <div class = "menu" style = "background-color:green">
-                <div  class = "menu-title">  <?= $menu->title ?> </div>
+                <div class = "containerMenu">
+                    <div  class = "menu-title">  <?= $menu->title ?> </div>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
                 <!-- TABLE MEGAMENU -->
                 <?php foreach($megaMenu as $column) {
                     if($column->title === $menu->title){
