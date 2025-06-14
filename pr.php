@@ -46,8 +46,10 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                 <?php foreach($megaMenu as $column) {
                     if($column->title === $menu->title){
                 ?>
-                <div class = "list" style = "display:none" >
-                    <div style = "background-color: blue;"><?= $column->list ?></div>
+                <div class = "list" >
+                    <div class = 'containerList'>
+                        <div><?= $column->list ?></div>
+                    </div>
                     <?php foreach($categoryTable as $category) { 
                         if($category->title === $menu->title && $category->list === $column->list){
                     ?>
@@ -71,7 +73,7 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                     <?php foreach($imageTable as $img){
                         if ($img->list === $column->list && $img->title === $menu->title){
                     ?>
-                    <div class = "image">
+                    <div class = "image" >
                         <div style = "background-color :aquamarine">
                             <img src="<?= $img->image ?>" alt="">
                             <div><?= $img->body ?></div>
