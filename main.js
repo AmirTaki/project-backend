@@ -5,7 +5,6 @@ const megaMenu = document.querySelector(".megaMenu")
 const containerCross = document.querySelector(".containerCross i")
 
 
-
 //RESIZE ADD EVENT LISTER SIZE 
 window.addEventListener("resize", (e)=>{
     HideFlexInputSearchHeader()          // HIDE FLEX SEARCH INPUT
@@ -50,3 +49,4 @@ containerCross.addEventListener('click', (e)=>{
 function hiddenSidebarResize (){
     megaMenu.style.display = window.innerWidth < 750 ? "none" : "flex";
 }
+

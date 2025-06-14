@@ -42,47 +42,48 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                     <div class = "rotateIcon"> <i class="bi bi-chevron-down"></i></div>         
                 </div>
                 <!-- TABLE MEGAMENU -->
-                <?php foreach($megaMenu as $column) {
-                    if($column->title === $menu->title){
-                ?>
-                <div class = "list">
-                    <div class = "container-list" >
-                        <div ><?= $column->list ?></div>
-                        <div class = "chevron_icon"> <i class="bi bi-chevron-right"></i></div>         
-                    </div>
-                    <?php foreach($categoryTable as $category) { 
-                        if($category->title === $menu->title && $category->list === $column->list){
+                <div class = "megaMenuContainer"> 
+                    <?php foreach($megaMenu as $column) {
+                        if($column->title === $menu->title){
                     ?>
-                    <!-- TABLE CATEGORY -->
-                    <div class = "category">
-                        <div style = "display: flex; background-color: greenyellow ;">
-                            <div><?= $category->category ?></div>
-                            <i class="<?= $category->sign ?>"></i>
+                    <div class = "list">
+                        <div class = "container-list" >
+                            <div ><?= $column->list ?></div>
+                            <div class = "chevron_icon"> <i class="bi bi-chevron-right"></i></div>         
                         </div>
-                    </div>
-                    <?php }} ?>
-                    <!-- TABLE SERIES -->
-                    <?php foreach($seriesTable as $series) {
-                        if($series->list === $column->list && $series->title === $menu->title){
-                    ?>
-                    <div class = "product">
-                        <div style = " background-color: pink "><?= $series->series ?></div>
-                    </div>
-                    <?php }} ?>
-                    <!-- TABLE IMAGE -->
-                    <?php foreach($imageTable as $img){
-                        if ($img->list === $column->list && $img->title === $menu->title){
-                    ?>
-                    <div class = "image" >
-                        <div style = "background-color :aquamarine">
-                            <img src="<?= $img->image ?>" alt="">
-                            <div><?= $img->body ?></div>
+                        <?php foreach($categoryTable as $category) { 
+                            if($category->title === $menu->title && $category->list === $column->list){
+                        ?>
+                        <!-- TABLE CATEGORY -->
+                        <div class = "category">
+                            <div style = "display: flex; background-color: greenyellow ;">
+                                <div><?= $category->category ?></div>
+                                <i class="<?= $category->sign ?>"></i>
+                            </div>
                         </div>
+                        <?php }} ?>
+                        <!-- TABLE SERIES -->
+                        <?php foreach($seriesTable as $series) {
+                            if($series->list === $column->list && $series->title === $menu->title){
+                        ?>
+                        <div class = "product">
+                            <div style = " background-color: pink "><?= $series->series ?></div>
+                        </div>
+                        <?php }} ?>
+                        <!-- TABLE IMAGE -->
+                        <?php foreach($imageTable as $img){
+                            if ($img->list === $column->list && $img->title === $menu->title){
+                        ?>
+                        <div class = "image" >
+                            <div style = "background-color :aquamarine">
+                                <img src="<?= $img->image ?>" alt="">
+                                <div><?= $img->body ?></div>
+                            </div>
+                        </div>
+                        <?php }} ?>
                     </div>
-                    <?php }} ?>
+                    <?php }} ?>     
                 </div>
-                <?php }} ?>                    
-        
             </div>
             <?php } ?>
         </div>

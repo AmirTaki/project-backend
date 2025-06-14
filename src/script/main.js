@@ -10,6 +10,7 @@ const exitSidebbar = document.querySelectorAll('.exitSidebbar');
 const containerSideToinSide = document.querySelectorAll(".containerSideToinSide")
 const itemHeader = document.querySelectorAll('.itemHeader')
 
+
 searchIconInput.addEventListener("focus", (e)=> {
     iconSearch.style.opacity = 0
 })

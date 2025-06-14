@@ -104,24 +104,17 @@
     border-bottom: 2px solid black;
 }
 /* TABLE MEGAMENU */
-/* list */
-.list{
-    position: fixed;
+/* megaMenuContainer  */
+.megaMenuContainer{
     width: 100%;
-    top : 50px;
-    left : 0;
-    height: 500px;
-    display: none;
-    flex-flow: column nowrap;
     background-color: red;
+    height: 500px;
+    position: fixed;
+    top: 50px;
+    left : 0;
 }
-/* container list */
-.menu:hover .list{
-    display: flex;
-}
-.container-list{
-   
-}
+/* list */
+
 /* chevonIcon */
 .chevron_icon{
     display: none;
@@ -263,17 +256,21 @@
        border: none; 
     }  
     /* TABLE MEGAMENU */
+    .megaMenuContainer{
+        position: static;
+        height: auto;
+    }
     /* list */
-    /* .list{
+    .list{
         width: 100%;
         position: static;
         display: flex;
         flex-flow: column nowrap;
         height: auto;
         overflow: hidden;
-    }*/
+    }
     /* container list */
-    /* .container-list{
+    .container-list{
         background-color: rgb(246, 246, 246);
         display: flex;
         flex-flow: row nowrap;
@@ -293,7 +290,7 @@
         cursor: pointer;
         background-color: aliceblue;
         color:rgb(62, 62, 62)
-    } */
+    }
     /* chevron icon */
     .chevron_icon{
         display: block;  
