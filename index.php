@@ -34,19 +34,18 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                     <div><?= $menu->title ?></div>
                     <div class = "arrowdownHeader"><i class="bi bi-chevron-down"></i></div>
                 </div>
-        
-                <div class = "containerSidertoSider" style = "background-color: pink;" >
-                    <div class = "containerSidertoSiderDiv" >
-                        <div class = "itemSiderDiv" style = "width : 100%">
-                            <?php foreach($megaMenu as $column){
-                                if ($column->title === $menu->title){
-                            ?>
-                            <div class = "itemSidertoSider">
-                                <div><?= $column->list ?></div>
-                                <i><i class="bi bi-chevron-right"></i></i>
-                            </div>
-                            <?php }} ?>
+                
+                <?php foreach($megaMenu as $column){
+                    if ($column->title === $menu->title){
+                ?>
+                <div class = "containerSidertoSider" style = 'background-color : red'>
+                 
+                    <div class = "itemSiderDiv">
+                        <div class = "itemSidertoSider">
+                            <div><?= $column->list ?></div>
+                            <i><i class="bi bi-chevron-right"></i></i>
                         </div>
+            
                     </div>
                   
                  
@@ -54,17 +53,18 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                         <div class = "backSideToSide">
                             <div class = 'arrowBacksideToside'>
                                 <i class="bi bi-arrow-left"></i>
-                                <div>back</div>
+                                <div></div>
                             </div>
                             <div class = "exitSidebbar">
                                 <i class="bi bi-x-lg"></i>
                             </div>
                         </div>
                         <div class = "containerSideToinSide"> 
-                            <div class = "itemCategory">
+                            <div class = "itemCategory" >
                                 <div class ='titleCategory'>
                                     Category
                                 </div>
+                    
                                 <div class = "listCategory">
                                     <i class="bi bi-blockquote-left"></i>
                                     <div>itemSidetoisde</div>
@@ -114,7 +114,8 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                         </div>
 
                     </div>
-                </div>  
+                </div> 
+                <?php }} ?> 
             </div>
             <?php } ?>
             <!--  -->
