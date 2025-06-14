@@ -121,6 +121,12 @@
 /* list */
 .list{
     background-color: blue;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.container-list{
+    background-color: yellow;
+    width: 100%;
 }
 /* chevonIcon */
 .chevron_icon{
