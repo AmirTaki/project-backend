@@ -1,6 +1,7 @@
 const searchIconInput = document.querySelector(".searchIcon input")
 const iconSearch = document.querySelector(".searchIcon .bi-search")
 const iconSidebar = document.querySelector(".iconSidebar i")
+const megaMenu = document.querySelector(".megaMenu")
 
 //RESIZE ADD EVENT LISTER SIZE 
 window.addEventListener("resize", (e)=>{
@@ -32,8 +33,9 @@ iconSearch.addEventListener('click', (e)=>{
         HideFlexInputSearchHeader ();
     }
 })
-// MOVE SIDEBAR ANIMATION
+
+// ICON SIDEBAR ANIMATION MEGAMENU
 iconSidebar.addEventListener("click", (e)=>{
-    containterHeader.style.animation  = "sidebarMove .3s linear forwards"
-    containterHeader.style.display  = "inline"
+    megaMenu.style.animation  = "megaMenuMove .3s linear forwards"
+    megaMenu.style.display  = "flex"
 })

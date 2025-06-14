@@ -139,5 +139,40 @@
         scale: 1.2;
         cursor: pointer;
     }
+    /* MEGAMENU */
+    .megaMenu{
+        display: none;
+        background-color: red;
+        position: fixed;
+        top : 0;
+        left : 0
+    }
+    /* MEGA MENU ANIMATION */
+    @keyframes megaMenuMove {
+        0%{
+           transform: translateX(-800px); 
+        }   
+        100%{
+            transform: translateX(0);
+        }
+    } 
+    @keyframes megaMenuMoveReverse {
+        0%{
+           transform: translateX(0px); 
+        }
+        100%{
+            transform: translateX(-800px);
+        }
+    } 
+    /* MENU */
+    .menu{
+    }
+    /* MENU-TITLE */
+    .menu-title{
+        
+    }
+    .menu-title:hover {
+        
+    }
     
 }
