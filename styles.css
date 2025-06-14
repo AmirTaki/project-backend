@@ -72,6 +72,21 @@
 .iconSidebar{
     display: none;
 }   
+/* MEGAMENU */
+.megaMenu{
+    background-color: yellow;
+}
+/* MENU */
+.menu{
+    /* display: flex;
+    flex-flow:column  nowrap; */
+}
+/* MENU-TITLE */
+.menu-title{
+    background-color: rgb(14, 161, 36);
+    padding: 10px;
+    margin: 0;
+}
 
 /* MEDIDA QUERY SCREEN MOBILE SIZE */
 @media screen and (max-width : 750px) {

@@ -29,15 +29,16 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
             <img src="https://cdn.pixabay.com/photo/2016/12/17/18/12/logo-1914020_1280.png" alt="">
         </div>
         <!-- MEGAMENU & SIDEBAR -->
-        <!-- TABLE MENU -->
-        <?php  foreach($menus as $menu){ ?>
-            <div class = "menu" style = "display:none" >
-                <div style = "background-color: red;"><?= $menu->title ?></div>
+        <div class = "megaMenu">
+            <!-- TABLE MENU -->
+            <?php  foreach($menus as $menu){ ?>
+            <div class = "menu">
+                <div  class = "menu-title">  <?= $menu->title ?> </div>
+                <!-- TABLE MEGAMENU -->
                 <?php foreach($megaMenu as $column) {
                     if($column->title === $menu->title){
                 ?>
-                <!-- TABLE MEGAMENU -->
-                <div class = "list">
+                <div class = "list" style = "display:none" >
                     <div style = "background-color: blue;"><?= $column->list ?></div>
                     <?php foreach($categoryTable as $category) { 
                         if($category->title === $menu->title && $category->list === $column->list){
@@ -72,7 +73,9 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                 </div>
                 <?php }} ?>
             </div>
-        <?php } ?>
+            <?php } ?>
+        </div>
+
         <!-- SEARCH ICON HEADER -->
         <div class = "searchIcon">
             <div><input type="search"></div>
