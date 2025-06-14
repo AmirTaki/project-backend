@@ -2,10 +2,12 @@ const searchIconInput = document.querySelector(".searchIcon input")
 const iconSearch = document.querySelector(".searchIcon .bi-search")
 const iconSidebar = document.querySelector(".iconSidebar i")
 const megaMenu = document.querySelector(".megaMenu")
-
+const containerCross = document.querySelector(".containerCross i")
 //RESIZE ADD EVENT LISTER SIZE 
 window.addEventListener("resize", (e)=>{
-    HideFlexInputSearchHeader()
+    HideFlexInputSearchHeader()          // HIDE FLEX SEARCH INPUT
+    hiddenSidebarResize()               // HIDEEN SIDEBAR MEGEMENE RESIZE AT WIDTH < 750PX
+   
 })
 
 // INPUT SERACH & ICON SEARCH : FOCUS
@@ -33,9 +35,16 @@ iconSearch.addEventListener('click', (e)=>{
         HideFlexInputSearchHeader ();
     }
 })
-
 // ICON SIDEBAR ANIMATION MEGAMENU
 iconSidebar.addEventListener("click", (e)=>{
     megaMenu.style.animation  = "megaMenuMove .3s linear forwards"
     megaMenu.style.display  = "flex"
 })
+// ICON SIDEBAR ANIMATION MEGAMENU
+containerCross.addEventListener('click', (e)=>{
+    megaMenu.style.animation  = "sidebarMoveReverse .3s linear forwards"
+})
+// HIDEEN SIDEBAR MEGEMENE RESIZE AT WIDTH < 750PX
+function hiddenSidebarResize (){
+    megaMenu.style.display = window.innerWidth < 750 ? "none" : "flex";
+}

@@ -31,7 +31,7 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
         <!-- MEGAMENU & SIDEBAR -->
         <div class = "megaMenu">
             <!--  CONTANIER CROSS -->
-            <div class = "containerCross" style = "background-color : blue">
+            <div class = "containerCross">
                 <i class="bi bi-x-lg"></i>
             </div>
             <!-- TABLE MENU -->
