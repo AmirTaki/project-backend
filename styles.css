@@ -111,15 +111,17 @@
     position: fixed;
     left : 0;
     z-index: 2;
-    top : 100px;
-    display: flex;
+    height: 500px;
+    top : 50px;
+    display: none;
     flex-flow: row nowrap;
 }
 /* container list */
+.menu:hover .list{
+    display: flex;
+}
 .container-list{
-    background-color: red;
-    width: 50%;
-    height: 500px
+    display: none;
 }
 .menu:hover .container-list {
 
