@@ -112,9 +112,16 @@
     position: fixed;
     top: 50px;
     left : 0;
+    display: none;
+}
+
+.menu:hover .megaMenuContainer {
+    display: flex;
 }
 /* list */
-
+.list{
+    background-color: blue;
+}
 /* chevonIcon */
 .chevron_icon{
     display: none;
@@ -259,7 +266,11 @@
     .megaMenuContainer{
         position: static;
         height: auto;
+        display: block;
     }
+    .menu:hover .megaMenuContainer {
+        display: block;
+}
     /* list */
     .list{
         width: 100%;
