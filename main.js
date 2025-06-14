@@ -3,8 +3,8 @@ const iconSearch = document.querySelector(".searchIcon .bi-search")
 const iconSidebar = document.querySelector(".iconSidebar i")
 const megaMenu = document.querySelector(".megaMenu")
 const containerCross = document.querySelector(".containerCross i")
-const containerMenu  = document.querySelectorAll(".containerMenu")
-const list = document.querySelectorAll(".list")
+
+
 
 //RESIZE ADD EVENT LISTER SIZE 
 window.addEventListener("resize", (e)=>{
@@ -49,10 +49,4 @@ containerCross.addEventListener('click', (e)=>{
 // HIDEEN SIDEBAR MEGEMENE RESIZE AT WIDTH < 750PX
 function hiddenSidebarResize (){
     megaMenu.style.display = window.innerWidth < 750 ? "none" : "flex";
-}
-// SHOW TABLE MEGAMENU => CONTAINER MAIN : THOUCH MOUSE 
-for (let i = 0; i < containerMenu.length ; i++){
-    containerMenu[i].addEventListener("mousemove", (e)=>{
-        list[i].style.display = "flex"   
-    })
 }
