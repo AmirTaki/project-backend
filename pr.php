@@ -20,40 +20,36 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
     <title>Document</title>
 </head>
 <body>
-    <!-- HEADER -->
-    <div class = "header" >
-        <div class = "iconSidebar">
-            <i class="bi bi-list"></i>
-        </div>
-        <div class = "logo">
-            <img src="https://cdn.pixabay.com/photo/2016/12/17/18/12/logo-1914020_1280.png" alt="">
-        </div>
-        <!-- MENU -->
-        <div class = "menu">
-            <div>menu</div>
-            <div class = 'item' style = "display :none">
-                <div>item</div>
-                    <div class = "container">
-                        <div class = "list">list</div>
-                        <div class ="product">product</div>
-                        <div class = "img">img</div>
+    
+ 
+    <div class = "header">
+        <?php foreach($menus as $menu)  {?>
+            <div class = "menu">
+                <div class = "menu-title">
+                    <div><?= $menu->title ?></div>
+                    <div class = 'item'>
+                        <?php foreach($megaMenu as $list) { 
+                            if($list->title === $menu->title) {
+                        ?>
+                            <div><?= $list->list ?></div>
+                            <div class = "container">
+                                <div class = "category">
+                                    <?php 
+                                        foreach($categoryTable as $category){
+                                            if($category->title === $menu->title && $category->list === $list->list){
+                                    ?>
+                                    <div><?= $category->category ?></div>
+                                    <?php  }}?>
+                                </div>
+                                <div class ="product">product</div>
+                                <div class = "img">img</div>
+                            </div>
+                            <?php }} ?>
                     </div>
                 </div>
-            </div>
-        </div>    
-        </div>
-
-        <!-- SEARCH ICON HEADER -->
-        <div class = "searchIcon">
-            <div><input type="search"></div>
-            <i class="bi bi-search"></i>
-            <div><i class="bi bi-person-circle"></i></div>
-            <div class = "iconSearch_header"><i class="bi bi-person-circle"></i></div>
-            <div class = "iconSearch_header"><i class="bi bi-person-circle"></i></div>
-            <div class = "iconSearch_header"><i class="bi bi-person-circle"></i></div>
-        </div>
+            </div> 
+        <?php } ?> 
     </div>
-    <!-- SCRIPT FILE -->
-    <script src = "./main.js"></script>
+
+
 </body>
-</html>
