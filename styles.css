@@ -123,11 +123,13 @@
     background-color: blue;
     display: flex;
     flex-flow: column nowrap;
+    width: 100%;
 }
 .container-list{
     background-color: yellow;
-    width: 100%;
+    width: 25%;
 }
+.column-list{}
 /* chevonIcon */
 .chevron_icon{
     display: none;

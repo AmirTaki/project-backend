@@ -47,9 +47,8 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                         <?php foreach($megaMenu as $column) {
                             if($column->title === $menu->title){
                         ?>
-                  
                         <div class = "container-list" >
-                            <div ><?= $column->list ?></div>
+                            <div class = "column-list"><?= $column->list ?></div>
                             <div class = "chevron_icon"> <i class="bi bi-chevron-right"></i></div>         
                         </div>
                         <?php foreach($categoryTable as $category) { 
