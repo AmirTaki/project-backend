@@ -106,14 +106,23 @@
 /* TABLE MEGAMENU */
 /* list */
 .list{
-
+    background-color: blue;
+    width: 100%;
+    position: fixed;
+    left : 0;
+    z-index: 2;
+    top : 100px;
+    display: flex;
+    flex-flow: row nowrap;
 }
 /* container list */
 .container-list{
-
+    background-color: red;
+    width: 50%;
+    height: 500px
 }
 .menu:hover .container-list {
-   
+
 }
 .container-list:hover {
  
