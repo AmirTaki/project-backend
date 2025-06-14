@@ -31,7 +31,7 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
         <!-- MEGAMENU & SIDEBAR -->
         <!-- TABLE MENU -->
         <?php  foreach($menus as $menu){ ?>
-            <div class = "menu" style = "display:none">
+            <div class = "menu" style = "display:none" >
                 <div style = "background-color: red;"><?= $menu->title ?></div>
                 <?php foreach($megaMenu as $column) {
                     if($column->title === $menu->title){
@@ -83,5 +83,7 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
             <div class = "iconSearch_header"><i class="bi bi-person-circle"></i></div>
         </div>
     </div>
+    <!-- SCRIPT FILE -->
+    <script src = "./main.js"></script>
 </body>
 </html>

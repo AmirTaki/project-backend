@@ -31,7 +31,6 @@
 .searchIcon input {
     width: 0;
     display: none;
-    /* opacity: 0; */
     border: none;
     outline: none;
     border-radius: 5px;
