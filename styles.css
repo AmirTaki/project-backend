@@ -150,13 +150,15 @@
     /* MEGAMENU */
     .megaMenu{
         display: none;
-        background-color: red;
+        background-color: rgb(255, 255, 255);
         position: fixed;
         top : 0;
         left : 0;
         z-index: 2;
         flex-flow : column nowrap;
         width: 100%;
+        border-bottom: 1px solid rgb(212, 212, 212);
+        padding-bottom: 10px;
     }
     /* MEGA MENU ANIMATION */
     @keyframes megaMenuMove {
@@ -180,14 +182,15 @@
         display:  flex;
         width: 100%;
         padding: 20px;
+        margin-bottom: 10px;
         color: gray;
+        border-bottom:  1px solid rgb(220, 220, 220);
     }  
     .containerCross i {
         border: 1px solid gray;
         padding: 5px;
         border-radius: 4px;
         transition: color .5s, scale .5s, border .5s;
-
     }
     .containerCross i:hover {
         cursor: pointer;
@@ -205,15 +208,27 @@
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        background-color: blue;
-        padding: 3px 14px;
+        padding: 0px 14px;
+        margin: 0;
+        color : gray;
+        transition: color .5s 
+    }
+    .containerMenu:hover {
+        cursor: pointer;
+        color : rgb(57, 57, 57)
+    }
+    .rotateIcon {
+        transition: transform .5s;
+    }
+    .containerMenu:hover  .rotateIcon  {
+        transform: rotate(180deg);
     }
     .containerMenu i{
         display: block;
     }
     /* MENU-TITLE */
     .menu-title{
-        display: inline;
+        display: flex;
         border: none;
     }
     .menu-title:hover {

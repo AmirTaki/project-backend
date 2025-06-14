@@ -36,10 +36,11 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
             </div>
             <!-- TABLE MENU -->
             <?php  foreach($menus as $menu){ ?>
-            <div class = "menu" style = "background-color:green">
+            <div class = "menu" >
                 <div class = "containerMenu">
                     <div  class = "menu-title">  <?= $menu->title ?> </div>
-                    <i class="bi bi-chevron-down"></i>
+                    <div class = "rotateIcon"> <i class="bi bi-chevron-down"></i></div>
+                   
                 </div>
                 <!-- TABLE MEGAMENU -->
                 <?php foreach($megaMenu as $column) {
