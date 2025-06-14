@@ -30,9 +30,13 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
         </div>
         <!-- MEGAMENU & SIDEBAR -->
         <div class = "megaMenu">
+            <!--  CONTANIER CROSS -->
+            <div class = "containerCross" style = "background-color : blue">
+                <i class="bi bi-x-lg"></i>
+            </div>
             <!-- TABLE MENU -->
             <?php  foreach($menus as $menu){ ?>
-            <div class = "menu">
+            <div class = "menu" style = "background-color:green">
                 <div  class = "menu-title">  <?= $menu->title ?> </div>
                 <!-- TABLE MEGAMENU -->
                 <?php foreach($megaMenu as $column) {

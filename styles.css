@@ -76,6 +76,10 @@
 .megaMenu{
     display: flex;
 }
+/* CONTAINER CROSS */
+.containerCross{
+    display:  none;
+}
 /* MENU */
 .menu{
     margin-right: 20px;
@@ -164,6 +168,10 @@
             transform: translateX(-800px);
         }
     } 
+    /* CONTAINER CROSS */
+    .containerCross{
+        display:  flex;
+    }
     /* MENU */
     .menu{
     }
