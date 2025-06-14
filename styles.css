@@ -103,6 +103,10 @@
     cursor: pointer;
     border-bottom: 2px solid black;
 }
+/* CONATINER MAGE MENU */
+.contaninerMegaMenu{
+    display: none;
+}
 /* TABLE MEGAMENU */
 .list{
     position: fixed;
@@ -110,13 +114,9 @@
     height: 500px;
     left : 0;
     top : 50px;
-    display: flex;
+}
 
-}
-.containerList{
-    display: flex;
-    flex-flow:  column nowrap;
-}
+
 
 .category, .product, .image {
     display: none;
@@ -253,5 +253,10 @@
     .menu-title:hover {
        border: none; 
     }  
-    
+    /* TABLE MEGAMENU */
+    .list{
+        width: 100%;
+        position: static;
+        display: flex;
+    }
 }
