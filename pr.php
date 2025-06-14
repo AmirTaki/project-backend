@@ -46,7 +46,7 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                     if($column->title === $menu->title){
                 ?>
                 <div class = "list" style = "background-color : red">
-                    <div class = "container-list" style = "background-color : yellow ">
+                    <div class = "container-list" >
                         <div ><?= $column->list ?></div>
                         <div class = "chevron_icon"> <i class="bi bi-chevron-right"></i></div>         
                     </div>
