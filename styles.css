@@ -226,14 +226,14 @@
         color : gray;
         transition: color .5s 
     }
-    .containerMenu:hover {
+    .containerMenu:hover, menu:hover .containerMenu {
         cursor: pointer;
         color : rgb(57, 57, 57)
     }
     .rotateIcon {
         transition: transform .5s;
     }
-    .menu:hover:hover  .rotateIcon  {
+    .menu:hover  .rotateIcon  {
         transform: rotate(180deg);
     }
     .containerMenu i{
@@ -257,14 +257,24 @@
         overflow: hidden;
     }
     .container-list{
+        background-color: rgb(246, 246, 246);
         display: flex;
         flex-flow: row nowrap;
+        position: static;
         width: 100%;
         height: 0;
         justify-content: space-between;
-        transition: height .3s;
+        padding: 0 30px;
+        align-items: center;
+        color : gray;
+        transition: color .5S,  background-color .5s, height .3s ;
     }
     .menu:hover .container-list {
-        height: 30px;
+        height: 40px;
+    }
+    .container-list:hover {
+        cursor: pointer;
+        background-color: aliceblue;
+        color:rgb(62, 62, 62)
     }
 }
