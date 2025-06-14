@@ -149,7 +149,10 @@
         background-color: red;
         position: fixed;
         top : 0;
-        left : 0
+        left : 0;
+        z-index: 2;
+        flex-flow : column nowrap;
+        width: 100%;
     }
     /* MEGA MENU ANIMATION */
     @keyframes megaMenuMove {
@@ -171,6 +174,21 @@
     /* CONTAINER CROSS */
     .containerCross{
         display:  flex;
+        width: 100%;
+        padding: 20px;
+        color: gray;
+    }  
+    .containerCross i {
+        border: 1px solid gray;
+        padding: 5px;
+        border-radius: 4px;
+        transition: color .5s, scale .5s;
+
+    }
+    .containerCross i:hover {
+        cursor: pointer;
+        color: rgb(52, 52, 52);
+        scale: 1.2;
     }
     /* MENU */
     .menu{
