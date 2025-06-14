@@ -74,18 +74,26 @@
 }   
 /* MEGAMENU */
 .megaMenu{
-    background-color: yellow;
+    display: flex;
 }
 /* MENU */
 .menu{
-    /* display: flex;
-    flex-flow:column  nowrap; */
+    margin-right: 20px;
 }
 /* MENU-TITLE */
 .menu-title{
-    background-color: rgb(14, 161, 36);
-    padding: 10px;
-    margin: 0;
+    padding: 10px 0;
+    font-size: 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid white;
+    transform:  border-bottom .5s;
+}
+.menu-title:hover {
+    cursor: pointer;
+    border-bottom: 2px solid black;
 }
 
 /* MEDIDA QUERY SCREEN MOBILE SIZE */
