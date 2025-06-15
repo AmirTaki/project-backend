@@ -38,7 +38,7 @@
     /* height: 500px; */
     left:0;
     width: 25%;
-    display: none
+    display: none;
 }
 .icon-item{
     display: none;
@@ -168,13 +168,20 @@
         width: 100%;
         overflow: hidden;
         height: auto; 
+        padding: 10px  0;
     }
+
     .item-title{
-        height: 0;
+        padding: 10px;
         transition: height .5s;
     }
+    .item-title:hover {
+        cursor: pointer;
+        background-color: aliceblue;
+    }
     .icon-item{
-        display: block;
+        display: inline-flex;
+        float: right;
     }
     .menu-title:hover .item-title{
         height: auto
