@@ -31,20 +31,36 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
                         <?php foreach($megaMenu as $list) { 
                             if($list->title === $menu->title) {
                         ?>
-                            <div><?= $list->list ?></div>
-                            <div class = "container">
-                                <div class = "category">
-                                    <?php 
-                                        foreach($categoryTable as $category){
-                                            if($category->title === $menu->title && $category->list === $list->list){
-                                    ?>
-                                    <div><?= $category->category ?></div>
-                                    <?php  }}?>
+                            <div class = "item-title"><?= $list->list ?>
+                               <div class = "container">
+                                    <div class = "category">
+                                        <?php 
+                                            foreach($categoryTable as $category){
+                                                if($category->title === $menu->title && $category->list === $list->list){
+                                        ?>
+                                            <div><?= $category->category ?></div>
+                                        <?php  }}?>
+                                    </div>
+                                    <div class ="product">
+                                        <?php 
+                                            foreach($seriesTable as $series){
+                                                if($series->title === $menu->title && $series->list === $list->list){
+                                        ?>
+                                            <div><?= $series->series ?></div>
+                                        <?php }} ?>
+                                    </div>
+                                    <div class = "img">
+                                        <?php 
+                                            foreach($imageTable as $img){
+                                                if($img->title === $menu->title && $img->list === $list->list){
+                                        ?>
+                                            <img src="<?= $img->image ?>" alt="">
+                                        <?php }} ?>
+                                    </div>
                                 </div>
-                                <div class ="product">product</div>
-                                <div class = "img">img</div>
                             </div>
-                            <?php }} ?>
+                         
+                        <?php }} ?>
                     </div>
                 </div>
             </div> 
