@@ -23,13 +23,14 @@
 }
 .menu{
     background-color: red;
-    /* width: 100%; */
-    /* display: flex; */
     margin-right: 10px ;
 }
 .menu:hover  .item{
     display: block;
     animation:  " ";
+}
+.icon-title{
+    display: none;
 }
 .item{
     background-color: blue;
@@ -146,6 +147,14 @@
             transform: translateX(-800px);
         }
     } 
+    .titleContainer{
+        background-color: green;
+        display: flex;
+        width: 100%;
+    }
+    .icon-title{
+        display: block;
+    }
     .item{
         background-color: blue;
         position: static;

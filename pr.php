@@ -34,7 +34,10 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
             <?php foreach($menus as $menu)  {?>
                 <div class = "menu">
                     <div class = "menu-title">
-                        <div><?= $menu->title ?></div>
+                        <div class = "titleContainer">
+                            <div><?= $menu->title ?></div>
+                            <div class = "icon-title"> <i class="bi bi-chevron-down"></i></div>
+                        </div>       
                         <div class = 'item'>
                             <?php foreach($megaMenu as $list) { 
                                 if($list->title === $menu->title) {
