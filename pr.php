@@ -23,11 +23,14 @@ $imageTable = readTable ("asus", "SELECT * FROM asus.img_menu  Where status = 10
     
  
     <div class = "header">
-        <div class = "iconMenu">iconMenu</div>
+        <div class = "iconMenu">
+            <i class="bi bi-list"></i>
+        </div>
         <div>logo</div>
-
         <div class = "sidebar">
-            <div class = "cross">corss</div>
+            <div class = "cross">
+                <div class = "crossIcon"><i class="bi bi-x-lg"></i></div>
+            </div>
             <?php foreach($menus as $menu)  {?>
                 <div class = "menu">
                     <div class = "menu-title">

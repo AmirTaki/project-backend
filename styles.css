@@ -35,6 +35,7 @@
     background-color: blue;
     position:fixed;
     top: 20px;
+    /* height: 500px; */
     left:0;
     width: 25%;
     display: none
@@ -48,12 +49,14 @@
 .item-title:hover .img {
     display: flex;
 }
+
 .category {
     background-color: yellow;
     position: fixed;
     display: none;
     top:32px;
     left:25%;
+    /* height: 500px; */
     width:25% ;
 }
 
@@ -82,6 +85,12 @@
     }
     .iconMenu{
         display: block;
+        font-size: 25px;
+        transition: scale .5s ;
+    }
+    .iconMenu:hover{
+        cursor: pointer;
+        scale: 1.2;
     }
     .sidebar{
         display: none;
@@ -93,7 +102,26 @@
         height: 100%;
     }
     .cross{
-        display: block;
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        flex-flow: row nowrap;
+        padding: 10px;
+        border-bottom:  1px solid rgb(234, 234, 234);
+    }
+    .crossIcon{
+        color: gray;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid rgb(227, 227, 227);
+        transition: color .5s, scale .5s, border .5s;
+        border-radius: 5px;
+    }
+    .crossIcon:hover {
+        scale: 1.2;
+        color : rgb(53, 53, 53);
+        cursor: pointer;
+        border: 1px solid rgb(53, 53, 53);
+
     }
     .menu{
         width: 100%;
