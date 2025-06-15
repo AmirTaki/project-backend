@@ -27,7 +27,6 @@
 }
 .menu:hover  .item{
     display: block;
-    animation:  " ";
 }
 .icon-title{
     display: none;
@@ -40,6 +39,9 @@
     left:0;
     width: 25%;
     display: none
+}
+.icon-item{
+    display: none;
 }
 .item-title:hover .category {
     display: flex;
@@ -126,7 +128,7 @@
     }
     .menu{
         width: 100%;
-        background-color: red;
+        background-color: white;
         display: flex;
         flex-flow: column nowrap;
     }
@@ -148,18 +150,34 @@
         }
     } 
     .titleContainer{
-        background-color: green;
+        /* background-color: green; */
         display: flex;
+        justify-content: space-between;
         width: 100%;
+        padding: 16px 10px;
     }
     .icon-title{
         display: block;
     }
+    .menu-title {
+        transition: height .5s;
+    }
     .item{
-        background-color: blue;
+        background-color: rgb(238, 238, 238);
         position: static;
         width: 100%;
-        
+        overflow: hidden;
+        height: auto; 
+    }
+    .item-title{
+        height: 0;
+        transition: height .5s;
+    }
+    .icon-item{
+        display: block;
+    }
+    .menu-title:hover .item-title{
+        height: auto
     }
 
     .container{
